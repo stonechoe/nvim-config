@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
+
 vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
 vim.opt.swapfile = false -- don't create swap files
 vim.opt.showmode = false -- don't show mode on cmd line, we have statusline for that
 vim.opt.laststatus = 3 -- global statusline
 vim.opt.signcolumn = "yes" -- always show sign column
-vim.opt.termguicolors = true -- enable true colors
+vim.opt.termguicolors = false -- disable true colors
 vim.opt.timeoutlen = 400 -- time to wait for a mapped sequence to complete
 vim.opt.undofile = true -- persistent undo
 vim.opt.splitbelow = true
@@ -12,15 +13,32 @@ vim.opt.splitright = true
 vim.opt.updatetime = 250 -- interval for writing swap file to disk, also used by gitsigns
 vim.opt.cursorline = true
 
+local o = vim.opt
+o.cmdheight = 1
+o.showmatch = true
+o.smarttab = true
+o.smartindent = true
+
+-- search
+o.incsearch = true
+o.hlsearch = true
+
+-- mouse
+o.mouse = "a"
+o.mousescroll = "ver:1,hor:2"
+-- o.scrolloff=9999
+
 -- Folding
 vim.opt.foldlevel = 20
 vim.opt.foldenable = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {desc = "Center cursor after moving down half-page"})
+
 -- Spell
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
+-- vim.opt.spell = true
+-- vim.opt.spelllang = "en_us"
 
 -- Indenting
 vim.opt.expandtab = true
@@ -36,7 +54,7 @@ vim.opt.smartcase = true
 -- Numbers
 vim.opt.number = true
 vim.opt.ruler = false
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- disable some builtin vim plugins
 local default_disable_plugins = {
@@ -45,10 +63,10 @@ local default_disable_plugins = {
   "getscriptPlugin",
   "gzip",
   "logipat",
-  "netrw",
-  "netrwPlugin",
-  "netrwSettings",
-  "netrwFileHandlers",
+  --"netrw",
+  --"netrwPlugin",
+  --"netrwSettings",
+  --"netrwFileHandlers",
   "matchit",
   "tar",
   "tarPlugin",
