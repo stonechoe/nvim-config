@@ -12,15 +12,27 @@ vim.opt.splitright = true
 vim.opt.updatetime = 250 -- interval for writing swap file to disk, also used by gitsigns
 vim.opt.cursorline = true
 
+vim.opt.cmdheight = 1
+vim.opt.showmatch = true
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+
+-- search
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+
+-- mouse
+vim.opt.mouse = "a"
+vim.opt.mousescroll = "ver:1,hor:2"
+-- o.scrolloff=9999
+
 -- Folding
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = "expr"
 vim.opt.foldtext = ""
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
--- Spell
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {desc = "Center cursor after moving down half-page"})
 
 -- Indenting
 vim.opt.expandtab = true
@@ -36,4 +48,3 @@ vim.opt.smartcase = true
 -- Numbers
 vim.opt.number = true
 vim.opt.ruler = false
-vim.opt.relativenumber = true
