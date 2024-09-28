@@ -11,6 +11,7 @@ local servers = {
   "dartls",
   "pylsp",
   "pbls",
+  "metals",
   {
     "rust_analyzer",
     config = {
@@ -34,7 +35,7 @@ local servers = {
         }
       },
     }
-  }
+  },
 }
 
 return {
