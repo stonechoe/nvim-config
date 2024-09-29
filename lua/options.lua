@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
 vim.g.netrw_winsize = 20
 vim.g.netrw_banner = 1
