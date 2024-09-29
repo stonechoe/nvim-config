@@ -1,4 +1,10 @@
 vim.g.mapleader = " "
+
+vim.g.netrw_winsize = 20
+vim.g.netrw_banner = 1
+vim.g.netrw_liststyle = 3
+vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
+
 vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
 vim.opt.swapfile = false -- don't create swap files
 vim.opt.showmode = false -- don't show mode on cmd line, we have statusline for that
@@ -46,5 +52,57 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Numbers
+<<<<<<< HEAD
 vim.opt.number = true
 vim.opt.ruler = false
+=======
+o.number = true
+o.ruler = false
+-- uncomment both line to show relative & absolute
+-- o.relativenumber = true
+-- o.statuscolumn = "%s %l %r "
+
+local default_disable_plugins = {
+  "2html_plugin",
+  "getscript",
+  "getscriptPlugin",
+  "gzip",
+  "logipat",
+  --"netrw",
+  --"netrwPlugin",
+  --"netrwSettings",
+  --"netrwFileHandlers",
+  "matchit",
+  "tar",
+  "tarPlugin",
+  "rrhelper",
+  "spellfile_plugin",
+  "vimball",
+  "vimballPlugin",
+  "zip",
+  "zipPlugin",
+  "tutor",
+  "rplugin",
+  "syntax",
+  "synmenu",
+  "optwin",
+  "compiler",
+  "bugreport",
+  "ftplugin",
+}
+
+for _, plugin in pairs(default_disable_plugins) do
+  vim.g["loaded_" .. plugin] = 1
+end
+
+local default_disable_providers = {
+  "node",
+  "perl",
+  "python3",
+  "ruby",
+}
+
+for _, provider in ipairs(default_disable_providers) do
+  vim.g["loaded_" .. provider .. "_provider"] = 0
+end
+>>>>>>> 1e14950 (Add netrw)
