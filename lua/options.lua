@@ -1,5 +1,10 @@
 vim.g.mapleader = " "
 
+vim.g.netrw_winsize = 20
+vim.g.netrw_banner = 1
+vim.g.netrw_liststyle = 3
+vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
+
 vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
 vim.opt.swapfile = false -- don't create swap files
 vim.opt.showmode = false -- don't show mode on cmd line, we have statusline for that
@@ -52,11 +57,12 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Numbers
-vim.opt.number = true
-vim.opt.ruler = false
--- vim.opt.relativenumber = true
+o.number = true
+o.ruler = false
+-- uncomment both line to show relative & absolute
+-- o.relativenumber = true
+-- o.statuscolumn = "%s %l %r "
 
--- disable some builtin vim plugins
 local default_disable_plugins = {
   "2html_plugin",
   "getscript",
