@@ -2,8 +2,9 @@ vim.g.mapleader = ","
 
 vim.g.netrw_winsize = 20
 vim.g.netrw_banner = 1
-vim.g.netrw_liststyle = 3
+vim.g.netrw_liststyle = 1
 vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
+vim.g.netrw_keepdir = 0
 
 vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
 vim.opt.swapfile = false -- don't create swap files
@@ -54,7 +55,7 @@ vim.opt.softtabstop = 2
 
 -- Search
 vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- vim.opt.smartcase = true
 
 -- Numbers
 o.number = true
