@@ -4,6 +4,7 @@ return {
   { "windwp/nvim-autopairs",       config = true,              event = { "InsertEnter" } },
   { "mason-org/mason.nvim",        opts = {} },
   { "norcalli/nvim-colorizer.lua", cmd = { "ColorizerToggle" } },
+  { "mbbill/undotree",             cmd = { "UndotreeToggle", "UndotreeShow", "UndotreeHide", "UndotreeFocus" } },
   {
     "mistweaverco/kulala.nvim",
     ft = { "http", "rest" },

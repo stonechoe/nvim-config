@@ -2,7 +2,13 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   config = function()
-    local configs = require "nvim-treesitter.configs"
+    local ok, configs = pcall(require, "nvim-treesitter.configs")
+    if not ok then
+      vim.schedule(function()
+        vim.notify("nvim-treesitter.configs could not be loaded", vim.log.levels.WARN)
+      end)
+      return
+    end
 
     configs.setup {
       ensure_installed = {
