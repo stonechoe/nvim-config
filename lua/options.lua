@@ -53,12 +53,8 @@ vim.opt.ignorecase = true
 -- vim.opt.smartcase = true
 
 -- Numbers
-<<<<<<< HEAD
 vim.opt.number = true
 vim.opt.ruler = false
-=======
-o.number = true
-o.ruler = false
 -- uncomment both line to show relative & absolute
 -- o.relativenumber = true
 -- o.statuscolumn = "%s %l %r "
@@ -106,4 +102,4 @@ local default_disable_providers = {
 for _, provider in ipairs(default_disable_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
->>>>>>> 1e14950 (Add netrw)
+
